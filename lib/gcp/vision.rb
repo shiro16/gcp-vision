@@ -14,7 +14,7 @@ module Gcp
 
       private
       def client
-        @client ||= Client.new
+        @client ||= Gcp::Vision::Client.new
       end
     end
   end
