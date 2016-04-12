@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["shiro16"]
   spec.email         = ["nyanyanyawan24@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Google Cloud Platform Vision API Simple Client}
+  spec.description   = %q{Google Cloud Platform Vision API Simple Client}
   spec.homepage      = "https://github.com/shiro16/gcp-vision"
   spec.license       = "MIT"
 
@@ -19,9 +19,10 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_runtime_dependency 'httpclient'
+
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "pry"
-  spec.add_development_dependency "httpclient"
 end
