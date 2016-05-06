@@ -8,9 +8,9 @@ module Gcp
         result.each do |type, annotations|
           @annotations[type] = case type
                               when "labelAnnotations"
-                                annotations.map { |annotation| Label.new(annotation) }
+                                annotations.map { |annotation| Gcp::Vision::Annotation::Label.new(annotation) }
                               when "imagePropertiesAnnotation"
-                                annotations["dominantColors"]["colors"].map { |annotation| ImageProperty.new(annotation) }
+                                annotations["dominantColors"]["colors"].map { |annotation| Gcp::Vision::Annotation::ImageProperty.new(annotation) }
                               else
                                 annotations
                               end
